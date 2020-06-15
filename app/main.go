@@ -34,27 +34,24 @@ func main() {
 
 	s.Every(1).Minute().Do(func() {
 		SeqMsg := `{
-			data: {
-			Type: 1,
-			Hash: "0x48e44af30be97556e377b58de3e5d77e6801a82de906e647e121fe1497effac2",
-			ParentsHash: [
-			"0x0b82bab454743a0f0cae194b15c8bfa049cfc4fa230b1bb0fd42e4790ba39a69"
+			"Type":1,
+			"Hash":"0xb8ed9e555a2f1df24150f443c6fa1b695366508cbb6eb85041e7f6db3f9613e2",
+			"ParentsHash":[
+				"0xf1efee80c371a20090bf27e6ae9d015ad25cd9ff0fb3cf040458d02b7d51c8ee"
 			],
-			AccountNonce: 2157,
-			Height: 2157,
-			PublicKey: "BIDG6ARHwZspJ1gUJTuHrjre0pyL7YJvG7E+UnbujaOVym+AjVi6jZIhptr92lwqi0xkXyXnI10gHt8RtnRHzrI=",
-			Signature: "0x823d16432ba343f3a79d04ebadbab1683a5b93074d84e3c367c4815e568c682b156bff6c1b0a574319651dbe2d3e21f3ce21b5ea3085ea7de290371fb4b1297b01",
-			MineNonce: 0,
-			Weight: 2157,
-			Version: 0,
-			Issuer: "0x7349f7a6f622378d5fb0e2c16b9d4a3e5237c187",
-			BlsJointSig: "0x",
-			BlsJointPubKey: "0x",
-			StateRoot: "0x980e8a14f85aaa1dfc7a4377f2d7ef7feaada75b08ab8b8e73590304bee548dc",
-			Proposing: false,
-			Timestamp: 1591769404219
-			},
-			err: ""
+			"AccountNonce":10330,
+			"Height":10330,
+			"PublicKey":"BIDG6ARHwZspJ1gUJTuHrjre0pyL7YJvG7E+UnbujaOVym+AjVi6jZIhptr92lwqi0xkXyXnI10gHt8RtnRHzrI=",
+			"Signature":"0xeaa5753954c3021e5108caf14b7ff614234f7f1bbf3938d644fb20b665b2dc951a427d5be5553a3e7ed669d134a18d27052d5c7a99062f4dd3e687c2107939c001",
+			"MineNonce":0,
+			"Weight":10330,
+			"Version":0,
+			"Issuer":"0x7349f7a6f622378d5fb0e2c16b9d4a3e5237c187",
+			"BlsJointSig":"0x",
+			"BlsJointPubKey":"0x",
+			"StateRoot":"0xe7537563bd2288cf95cd1d84ea24bf1bc5f642c7a1b266cceffca814c79d859c",
+			"Proposing":false,
+			"Timestamp":1591769404219
 		}`
 		r.Report("LatestSequencer", SeqMsg, false)
 	})
