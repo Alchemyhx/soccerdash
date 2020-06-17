@@ -15,23 +15,25 @@ func main() {
 
 	s := gocron.NewScheduler(time.UTC)
 	s.Every(2).Seconds().Do(func() {
-		r.Report("TxPoolNum", "1", false)
+		r.Report("TxPoolNum", 1, false)
 	})
 
 	s.Every(10).Seconds().Do(func() {
-		r.Report("ConnNum", "10", false)
+		r.Report("ConnNum", 1, false)
 		r.Report("IsProducer", false, false)
 	})
 
-	s.Every(30).Seconds().Do(func() {
-		r.Report("NodeDelay", "30", false)
-	})
+	// 暂时不需要实现
+	// s.Every(30).Seconds().Do(func() {
+	// 	r.Report("NodeDelay", "30", false)
+	// })
 
 	s.Every(1).Minute().Do(func() {
-		r.Report("Version", "1.0", false)
-		r.Report("NodeName", "123", false)
+		r.Report("Version", "OGFull-v1.0.1", false)
+		r.Report("NodeName", "og", false)
 	})
 
+	// 实际情况是有新 Sequencer 就会推送而不是每分钟
 	s.Every(1).Minute().Do(func() {
 		SeqMsg := `{
 			"Type":1,
